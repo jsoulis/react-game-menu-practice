@@ -16,9 +16,12 @@ class App extends Component {
       //   if(el.userId === userid) return true;
       // })
 
+      console.log("hello fucktards");
       //이것도 안 된당! 
       for (let user in this.state.users) {
-        if(user.userid === userid) return true;
+        console.log(this.state.users[user]);
+        console.log(this.state.users[user].userid);
+        if(this.state.users[user].username === userid) return true;
       }
     }
     return false;
