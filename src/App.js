@@ -15,8 +15,6 @@ class App extends Component {
       // this.state.users.forEach((el) => {
       //   if(el.userId === userid) return true;
       // })
-
-      console.log("hello fucktards");
       //이것도 안 된당! 
       for (let user in this.state.users) {
         console.log(this.state.users[user]);
@@ -45,6 +43,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
           <UserList checkUser={this.doesUserIdExist} addUser={this.updateUsers}/>
+          <DisplayUsers userInfo={this.state.users}/>
       </div>
     );
   }
